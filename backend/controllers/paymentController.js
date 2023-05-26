@@ -21,7 +21,7 @@ exports.processPayment = catchAsyncErrors(async (req, res, next) => {
 exports.successMail = catchAsyncErrors(async (req, res, next) => {
   const message = `
     <h4>Dear Sir/Madam, Your order placed successfully!</h4>
-    <h6>Thank you for choosing Ayurda.</h6>
+    <h6>Thank you for choosing us.</h6>
   `;
 
   const subject = "Order Placed Successfully";

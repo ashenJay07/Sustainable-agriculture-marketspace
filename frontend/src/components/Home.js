@@ -18,7 +18,6 @@ const Home = ({ match }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([1, 1000]);
   const [category, setCategory] = useState("");
-  const [rating, setRating] = useState(0);
 
   const categories = ["90 mg/dl", "120 mg/dl", "180 mg/dl"];
 
@@ -41,8 +40,8 @@ const Home = ({ match }) => {
       return alert.error(error);
     }
 
-    dispatch(getProducts(keyword, currentPage, price, category, rating));
-  }, [dispatch, alert, error, keyword, currentPage, price, category, rating]);
+    dispatch(getProducts(keyword, currentPage, price, category));
+  }, [dispatch, alert, error, keyword, currentPage, price, category]);
 
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
@@ -108,32 +107,6 @@ const Home = ({ match }) => {
                       </div>
 
                       <hr className="my-3" />
-
-                      <div className="mt-5">
-                        <h4 className="mb-3">Ratings</h4>
-
-                        <ul className="pl-0">
-                          {[5, 4, 3, 2, 1].map((star) => (
-                            <li
-                              style={{
-                                cursor: "pointer",
-                                listStyleType: "none",
-                              }}
-                              key={star}
-                              onClick={() => setRating(star)}
-                            >
-                              <div className="rating-outer">
-                                <div
-                                  className="rating-inner"
-                                  style={{
-                                    width: `${star * 20}%`,
-                                  }}
-                                ></div>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
                     </div>
                   </div>
 

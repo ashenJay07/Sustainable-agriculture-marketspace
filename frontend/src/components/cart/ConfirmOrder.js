@@ -91,7 +91,9 @@ const ConfirmOrder = ({ history }) => {
             <hr />
             <p>
               Subtotal:{" "}
-              <span className="order-summary-values">${itemsPrice}</span>
+              <span className="order-summary-values">
+                ${itemsPrice.toFixed(2)}
+              </span>
             </p>
             <p>
               Shipping:{" "}
