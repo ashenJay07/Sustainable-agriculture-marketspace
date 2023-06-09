@@ -51,4 +51,4 @@ npm start
 
 ![CHEESE!](screenshots/7_successful_payment.png)
 
-![CHEESE!](screenshots/8_successful_mail.png)
+![CHEESE!](screenshots/8_successful_mail.jpeg)
